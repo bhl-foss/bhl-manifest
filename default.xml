@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <include name="lmp-base.xml" />
-  <include name="lmp-bsp.xml" />
+  <remote name="fio" fetch="https://github.com/foundriesio"/>
+  <remote name="lmp-mirrors" fetch="https://github.com/lmp-mirrors"/>
+  
+  <default remote="lmp-mirrors" revision="master" sync-j="4"/>
+  
+  <project name="bitbake" revision="0c6f86b60cfba67c20733516957c0a654eb2b44c"/>
+  <project name="lmp-tools" path="tools/lmp-tools" remote="fio" revision="585f3860a04c1397f861dd2212a1271cb4043019">
+    <linkfile src="setup-environment" dest="setup-environment"/>
+  </project>
+  <project name="meta-arm" path="layers/meta-arm" revision="96aad3b29aa7a5ee4df5cf617a6336e5218fa9bd"/>
+  <project name="meta-clang" path="layers/meta-clang" revision="99f035792afb98f1aa0ec8415d20df09de82f97b"/>
+  <project name="meta-freescale" path="layers/meta-freescale" revision="863c8117920280d922d48efbce3ffdc4318d5526"/>
+  <project name="meta-freescale-3rdparty" path="layers/meta-freescale-3rdparty" revision="93ba05e3a16a028b770fa1e813b13eb87a59ac63"/>
+  <project name="meta-intel" path="layers/meta-intel" revision="e3911bc45ee2a210408cfbc5217199ee6b7569a4"/>
+  <project name="meta-lmp" path="layers/meta-lmp" remote="fio" revision="49b995900134dbc13b9f4aa7f10cc45b9659c44c"/>
+  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-go" revision="708a0db8675c2e445b6fc09310a06538759ed88e"/>
+  <project name="meta-lts-mixins" path="layers/meta-lts-mixins-rust" revision="feed1bb0eb4aefb701d582156d7defb0c1fc0473"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" revision="594c9cf6d3205c8e40ff772383fd9ab7dd3ed2cc"/>
+  <project name="meta-raspberrypi" path="layers/meta-raspberrypi" revision="43683cb14b6afc144619335b3a2353b70762ff3e"/>
+  <project name="meta-security" path="layers/meta-security" revision="d398cc6ea6716afd3a3a6e88ad8fbdc89510ef23"/>
+  <project name="meta-st-stm32mp" path="layers/meta-st-stm32mp" revision="ca501bd7dbe023682903ceedddaacd940b0898f4"/>
+  <project name="meta-tegra" path="layers/meta-tegra" revision="3c429b60115600ddf3adaa7be28d6c2c0bfa1019"/>
+  <project name="meta-ti" path="layers/meta-ti" revision="474af844b0e808f5401ab0b89e59d1ade39f3d16"/>
+  <project name="meta-updater" path="layers/meta-updater" revision="9f7fe77932671751f3c7201d164ffbabd0cb2faf"/>
+  <project name="meta-virtualization" path="layers/meta-virtualization" revision="b3b3dbc67504e8cd498d6db202ddcf5a9dd26a9d"/>
+  <project name="meta-xilinx" path="layers/meta-xilinx" remote="fio" revision="f8d8efab12040712df32436643621b2756de1f76"/>
+  <project name="meta-xilinx-tools" path="layers/meta-xilinx-tools" remote="fio" revision="9acf9d1d02f465b3c435283f92557b632becc72a"/>
+  <project name="meta-yocto" path="layers/meta-yocto" revision="464204a5e52a3f3ae5d7ec9e36c143ca06fed3eb"/>
+  <project name="openembedded-core" path="layers/openembedded-core" revision="e1a604db8d2cf8782038b4016cc2e2052467333b"/>
 </manifest>
